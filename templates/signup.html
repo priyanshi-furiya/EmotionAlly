@@ -4,57 +4,67 @@
     <meta charset="UTF-8" />
     <title>EmtionAlly</title>
     <link rel="shortcut icon" href="mhcicon.png" type="image/x-icon" />
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="static\css\signup.css" />
+    <link rel="stylesheet" href="static/css/signup.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="logo">
-        <img src="static\images\logo.png" alt="" />
+        <img src="static/images/logo.png" alt="" />
       </div>
       <div class="text-center mt-4 name">EmotionAlly</div>
-      <form class="p-3 mt-3">
+      <form class="p-3 mt-3" action="/signup" method="POST">
         <div class="form-field d-flex align-items-center">
           <span class="far fa-user"></span>
           <input
             type="text"
-            name="userName"
-            id="userName"
+            name="username"
+            id="username"
             placeholder="Username"
+            required
           />
         </div>
         <div class="form-field d-flex align-items-center">
           <span class="far fa-user"></span>
-          <input type="text" name="email" id="email" placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
         </div>
         <div class="form-field d-flex align-items-center">
           <span class="fas fa-key"></span>
-          <input type="age" name="age" id="pwd" placeholder="Age" />
+          <input type="number" name="age" id="age" placeholder="Age" required />
         </div>
         <div class="form-field d-flex align-items-center">
           <span class="fas fa-key"></span>
-          <input type="gender" name="gender" id="pwd" placeholder="Gender" />
+          <input
+            type="text"
+            name="gender"
+            id="gender"
+            placeholder="Gender"
+            required
+          />
         </div>
         <div class="form-field d-flex align-items-center">
           <span class="fas fa-key"></span>
           <input
             type="password"
             name="password"
-            id="pwd"
+            id="password"
             placeholder="Password"
+            required
           />
         </div>
-        <button type="button" id="loginBtn" class="btn mt-3">Login</button>
+        <!-- Display error message if exists -->
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+        <button type="submit" class="btn mt-3">Signup</button>
       </form>
     </div>
-    <script>
-      document
-        .getElementById("loginBtn")
-        .addEventListener("click", function () {
-          window.location.href = "login"; // Replace 'welcome.html' with the desired target HTML page
-        });
-    </script>
   </body>
 </html>
