@@ -6,22 +6,23 @@
     <link rel="shortcut icon" href="mhcicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="static\css\login.css" />
+    <link rel="stylesheet" href="static/css/login.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="logo">
-        <img src="static\images\logo.png" alt="" />
+        <img src="static/images/logo.png" alt="" />
       </div>
       <div class="text-center mt-4 name">EmotionAlly</div>
-      <form class="p-3 mt-3">
+      <form class="p-3 mt-3" action="/login" method="POST">
         <div class="form-field d-flex align-items-center">
           <span class="far fa-user"></span>
           <input
             type="text"
-            name="userName"
-            id="userName"
+            name="username"
+            id="username"
             placeholder="Username"
+            required
           />
         </div>
         <div class="form-field d-flex align-items-center">
@@ -29,24 +30,19 @@
           <input
             type="password"
             name="password"
-            id="pwd"
+            id="password"
             placeholder="Password"
+            required
           />
         </div>
-        <button type="button" id="loginBtn" class="btn mt-3">Login</button>
+        <!-- Display error message if exists -->
+        <div class="error-message">{% if error %} {{ error }} {% endif %}</div>
+        <button type="submit" class="btn mt-3">Login</button>
       </form>
       <div class="text-center fs-6">
         Don't have an account?
         <a href="signup">Sign up</a>
       </div>
     </div>
-
-    <script>
-      document
-        .getElementById("loginBtn")
-        .addEventListener("click", function () {
-          window.location.href = "index"; // Replace 'welcome.html' with the desired target HTML page
-        });
-    </script>
   </body>
 </html>
