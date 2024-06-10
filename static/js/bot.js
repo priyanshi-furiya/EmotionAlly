@@ -29,7 +29,7 @@ const msgerChat = get(".msger-chat");
 // Icons made by Freepik from www.flaticon.com
 const BOT_IMG = "static/images/mhcicon.png";
 const PERSON_IMG = "static/images/person.png";
-const BOT_NAME = "Psychiatrist Bot";
+const BOT_NAME = "EmotionAlly Bot";
 const PERSON_NAME = "You";
 
 msgerForm.addEventListener("submit", event => {
