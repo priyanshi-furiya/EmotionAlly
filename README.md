@@ -2,6 +2,8 @@
 
 EmotionAlly is a compassionate mental health assistant chatbot designed to provide support and information related to mental health. This project utilizes Azure OpenAI's GPT-3.5-turbo for natural language understanding and response generation, and a SQLite database to store user interactions. The application is built with Flask and integrates several functionalities, including user authentication and querying mental health resources.
 
+Deployment link - https://project-emotionally.azurewebsites.net/
+
 ### Features
 - **User Authentication**: Users can sign up and log in to their accounts.
 - **Speech Recognition**: Integrates Web Speech API for speech-to-text conversion directly in the browser.
